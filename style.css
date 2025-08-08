@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(./netflix.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.hero-container .container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-container .logo h1 {
+  font-size: 3rem;
+}
+
+.container .text-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-container h1 {
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+form input {
+  padding: 1rem;
+  background: none;
+}
+
+form button {
+  padding-inline: .5rem;
+}
+
+/* reasons to see section */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card{
+  padding: 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(14, 14, 211, 0.741), rgb(186, 26, 26));
+  color: white;
+}
+
+@media (max-width:768px) {
+  .text-container form {
+    flex-direction: column;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-container .logo h1 {
+    font-size: 1rem;
+  }
+
+  .text-container {
+    margin-top: 1.5rem;
+  }
+
+  .text-container form {
+    flex-direction: column;
+  }
+
+  .text-container form button {
+    padding: .5rem;
+  }
+}
