@@ -7,7 +7,6 @@
 
 body {
   background-color: black;
-  color: white;
 }
 
 #hero {
@@ -87,31 +86,31 @@ form button {
   gap: 1rem;
 }
 
-.card{
+.card {
   padding: 1rem;
   border-radius: 1rem;
   background: linear-gradient(145deg, rgba(14, 14, 211, 0.741), rgb(186, 26, 26));
   color: white;
 }
 
-.form-container{
+.form-container {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.form-container input{
+.form-container input {
   background: none;
   background-color: transparent;
 }
 
 /* footer section */
 
-footer ul li{
+footer ul li {
   list-style: none;
 }
 
-footer ul li a{
+footer ul li a {
   color: white;
 }
 
@@ -141,5 +140,10 @@ footer ul li a{
 
   .text-container form button {
     padding: .5rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
   }
 }
